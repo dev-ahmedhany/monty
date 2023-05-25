@@ -8,7 +8,12 @@
 */
 int main(int argc, char *argv[])
 {
+  ssize_t read_line = 1;
+  size_t size = 0;
+  unsigned int counter = 0;
+  my_stack_t *stack = NULL;
 	FILE *file;
+  char *content;
 
 	if (argc != 2)
 	{
@@ -20,6 +25,18 @@ int main(int argc, char *argv[])
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
+	}
+
+  while (read_line > 0)
+	{
+		content = NULL;
+		read_line = getline(&content, &size, file);
+    counter++;
+		if (read_line > 0)
+		{
+			execute(content, &stack, counter, file);
+		}
+		free(content);
 	}
 
 	return (0);

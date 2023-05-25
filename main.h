@@ -1,8 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> /* File, fopen, getline, fclose, stderr */
+#include <stdlib.h> /* EXIT_SUCCESS, EXIT_FAILURE, free */
+
+#include <string.h> /* strtok, strcmp */
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -31,7 +33,12 @@ typedef struct stack_s
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+	void (*f)(my_stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+
+int execute(char *content, my_stack_t **head, unsigned int counter, FILE *file);
+void s_pall(my_stack_t **head, unsigned int number);
+void free_stack(my_stack_t *head);
 
 #endif
