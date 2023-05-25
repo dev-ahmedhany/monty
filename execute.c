@@ -11,7 +11,9 @@
 int execute(char *content, my_stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opList[] = {
-        {"pall", s_pall},{"push", s_push},{"pint", s_pint},
+        {"pall", s_pall},
+				{"push", s_push},
+				{"pint", s_pint},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
