@@ -8,7 +8,8 @@
 * @content: line content
 * Return: no return
 */
-int execute(char *content, my_stack_t **stack, unsigned int counter, FILE *file)
+int execute(char *content, my_stack_t **stack, unsigned int counter,
+FILE *file)
 {
 	instruction_t opList[] = {
 				{"pall", s_pall},

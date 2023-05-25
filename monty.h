@@ -46,7 +46,8 @@ typedef struct bus_s
 }  bus_t;
 extern bus_t bus;
 
-int execute(char *content, my_stack_t **head, unsigned int counter, FILE *file);
+int execute(char *content, my_stack_t **head, unsigned int counter,
+FILE *file);
 void s_push(my_stack_t **head, unsigned int number);
 void s_pall(my_stack_t **head, unsigned int number);
 void s_pint(my_stack_t **head, unsigned int number);
