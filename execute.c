@@ -17,7 +17,8 @@ FILE *file)
 				{"pint", s_pint},
 				{"pop", s_pop},
 				{"swap", s_swap},
-				{"add",s_add},
+				{"add", s_add},
+				{"nop", s_nop},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
