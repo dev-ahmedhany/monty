@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * addNode - add node to the head stack
+ * add_node - add node to the head stack
  * @head: head of the stack
  * @n: new_value
  * Return: no return
 */
-void addNode(my_stack_t **head, int n)
+void add_node(my_stack_t **head, int n)
 {
 
 	my_stack_t *new_node, *aux;

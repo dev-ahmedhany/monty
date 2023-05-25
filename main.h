@@ -51,7 +51,7 @@ void s_push(my_stack_t **head, unsigned int number);
 void s_pall(my_stack_t **head, unsigned int number);
 void s_pint(my_stack_t **head, unsigned int number);
 void free_stack(my_stack_t *head);
-void addNode(my_stack_t **head, int n);
-void addQueue(my_stack_t **head, int n);
+void add_node(my_stack_t **head, int n);
+void add_queue(my_stack_t **head, int n);
 
 #endif

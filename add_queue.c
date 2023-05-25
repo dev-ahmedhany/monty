@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * addQueue - add node to the tail stack
+ * add_queue - add node to the tail stack
  * @n: new_value
  * @head: head of the stack
  * Return: no return
 */
-void addQueue(my_stack_t **head, int n)
+void add_queue(my_stack_t **head, int n)
 {
 	my_stack_t *new_node, *aux;
 
