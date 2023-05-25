@@ -11,7 +11,7 @@
 int execute(char *content, my_stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opList[] = {
-        {"pall", s_pall},
+				{"pall", s_pall},
 				{"push", s_push},
 				{"pint", s_pint},
 				{NULL, NULL}
@@ -34,11 +34,11 @@ int execute(char *content, my_stack_t **stack, unsigned int counter, FILE *file)
 	}
 	if (op && opList[i].opcode == NULL)
 	{
-    fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
+		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
-  }
+	}
 	return (1);
 }
