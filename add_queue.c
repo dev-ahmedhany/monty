@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * add_queue - add node to the tail stack
