@@ -15,6 +15,7 @@ FILE *file)
 				{"pall", s_pall},
 				{"push", s_push},
 				{"pint", s_pint},
+				{"pop", s_pop},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
