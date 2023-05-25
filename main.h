@@ -37,8 +37,20 @@ typedef struct instruction_s
 } instruction_t;
 
 
+typedef struct bus_s
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
+}  bus_t;
+extern bus_t bus;
+
 int execute(char *content, my_stack_t **head, unsigned int counter, FILE *file);
+void s_push(my_stack_t **head, unsigned int number);
 void s_pall(my_stack_t **head, unsigned int number);
 void free_stack(my_stack_t *head);
+void addNode(my_stack_t **head, int n);
+void addQueue(my_stack_t **head, int n);
 
 #endif

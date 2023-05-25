@@ -1,5 +1,7 @@
 #include "main.h"
 
+bus_t bus = {NULL, NULL, NULL, 0};
+
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -21,6 +23,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
+	bus.file = file;
 	if (!file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -31,6 +34,7 @@ int main(int argc, char *argv[])
 	{
 		content = NULL;
 		read_line = getline(&content, &size, file);
+		bus.content = content;
     counter++;
 		if (read_line > 0)
 		{

@@ -11,7 +11,7 @@
 int execute(char *content, my_stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opList[] = {
-        {"pall", s_pall},
+        {"pall", s_pall},{"push", s_push},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
@@ -21,6 +21,7 @@ int execute(char *content, my_stack_t **stack, unsigned int counter, FILE *file)
 	if (op && op[0] == '#')
 		return (0);
 
+	bus.arg = strtok(NULL, " \n\t");
 	while (opList[i].opcode && op)
 	{
 		if (strcmp(op, opList[i].opcode) == 0)
